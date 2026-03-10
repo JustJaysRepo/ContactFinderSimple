@@ -8,7 +8,7 @@ namespace ContactFinder.Simple
 {
     public class ContactFinder
     {
-        private readonly Dictionary<string, Contact> _contacts;
+        private readonly Dictionary<string, Contact> _contacts = new();
 
         private static string NormalizeEmail(string email)
         {
