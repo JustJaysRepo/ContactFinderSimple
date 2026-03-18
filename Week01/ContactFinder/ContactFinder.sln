@@ -11,9 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.Simple.Tests", "tests\ContactFinder.Simple.Tests\ContactFinder.Simple.Tests.csproj", "{4FA83AE4-0DB1-44FB-9C1F-E70291FE4C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.Advanced", "src\ContactFinder.Advanced\ContactFinder.Advanced.csproj", "{E36F88DC-97DE-4158-A51F-B0DCDC2C2446}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.AdvancedRepl", "src\ContactFinder.Advanced\ContactFinder.AdvancedRepl.csproj", "{E36F88DC-97DE-4158-A51F-B0DCDC2C2446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.Advanced.Tests", "tests\ContactFinder.Advanced.Tests\ContactFinder.Advanced.Tests.csproj", "{40477F6A-5898-4C1F-893B-84193C61645C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.AdvancedRepl.Tests", "tests\ContactFinder.Advanced.Tests\ContactFinder.AdvancedRepl.Tests.csproj", "{40477F6A-5898-4C1F-893B-84193C61645C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactFinder.AdvancedCommandLine", "ContactFinder.AdvancedCommandLine\ContactFinder.AdvancedCommandLine.csproj", "{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,18 @@ Global
 		{40477F6A-5898-4C1F-893B-84193C61645C}.Release|x64.Build.0 = Release|Any CPU
 		{40477F6A-5898-4C1F-893B-84193C61645C}.Release|x86.ActiveCfg = Release|Any CPU
 		{40477F6A-5898-4C1F-893B-84193C61645C}.Release|x86.Build.0 = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|x64.Build.0 = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Debug|x86.Build.0 = Debug|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|x64.ActiveCfg = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|x64.Build.0 = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|x86.ActiveCfg = Release|Any CPU
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,5 +96,9 @@ Global
 		{4FA83AE4-0DB1-44FB-9C1F-E70291FE4C21} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{E36F88DC-97DE-4158-A51F-B0DCDC2C2446} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{40477F6A-5898-4C1F-893B-84193C61645C} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{3BA62F1E-28F8-4368-8BE5-2FE297930D5C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6049F61-67DF-46AF-B1BE-9CC7E551E836}
 	EndGlobalSection
 EndGlobal

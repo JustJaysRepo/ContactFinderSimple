@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ContactFinder.Advanced\ContactFinder.Advanced.csproj" />
+    <ProjectReference Include="..\..\src\ContactFinder.Advanced\ContactFinder.AdvancedRepl.csproj" />
   </ItemGroup>
 
 </Project>
