@@ -15,14 +15,16 @@ ContactFinderSimple/
 |- Week01/
 | |- ContactFinder/
 | |- src/
-| | |- ContactFinder.Simple/ # Basic in-memory contact manager (Dictionary, O(1) lookup)
-| | |- ContactFinder.AdvancedRepl/ # Interactive REPL with improved parsing and indexing
-| | |- ContactFinder.AdvancedCommandLine/ # Command-line app with SQL Server persistence
+| | |- ContactFinder.Simple/ # v1 Basic in-memory contact manager (Dictionary, O(1) lookup)
+| | |- ContactFinder.AdvancedRepl/ # v2 Interactive REPL with improved parsing and indexing
+| | |- ContactFinder.AdvancedCommandLine/ # v3 Command-line app with SQL Server persistence
+| | |- ContactFinder.Wpf/                 # v4 WPF desktop GUI (MVVM)
 | |
 | |- tests/
 | | |- ContactFinder.Simple.Tests/
 | | |- ContactFinder.AdvancedRepl.Tests/
 | | |- ContactFinder.AdvancedCommandLine.Tests/
+| | |-ContactFinder.Wpf.Tests
 | |
 | |- ContactFinder.sln
 
