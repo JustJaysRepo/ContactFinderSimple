@@ -15,6 +15,7 @@ ContactFinderSimple/
 |- Week01/
 | |- ContactFinder/
 | |- src/
+| | |- ContactFinder.Core/ # Core domain models and interfaces (records, services)
 | | |- ContactFinder.Simple/ # v1 Basic in-memory contact manager (Dictionary, O(1) lookup)
 | | |- ContactFinder.AdvancedRepl/ # v2 Interactive REPL with improved parsing and indexing
 | | |- ContactFinder.AdvancedCommandLine/ # v3 Command-line app with SQL Server persistence
