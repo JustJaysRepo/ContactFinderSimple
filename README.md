@@ -68,13 +68,41 @@ A minimal command-line app that stores contacts (name + email) in memory using a
 
 ### v2 - Advanced REPL (`ContactFinder.AdvancedRepl`)
 
-**Focus:** Improved command parsing and interactive experience.
+**Focus:** Cleaner architecture, quote-aware parsing, dual-index lookup, command table pattern.
 
-Planned improvements:
-- Quote-aware parsing (supports names with spaces)
-- Better command handling structure
-- Additional indexing (e.g., phone number lookup)
-- Improved user feedback and error handling
+Adds a phone field, normalizes phone numbers to digits-only for consistent lookup,
+and replaces the simple `Split()` parser with a proper tokenizer that respects
+quoted strings. Command dispatch moves from a `switch` to a
+`Dictionary<string, CommandSpec>` for extensibility.
+
+**Key concepts practiced:**
+- Referencing a shared project (`ContactFinder.Core`)
+- Quote-aware tokenization (`StringBuilder` + state machine)
+- Dual dictionary index - email -> contact, phone -> email key for O(1) lookup by either field
+- Phone normalization -`(555) 123-4567`, `555-123-4567`, and `5551234567` all resolve to the same record
+- Command table pattern (`Dictionary<string, CommandSpec>`) vs. `switch`
+- `Func<string[], bool>` as a handler delegate
+- Single-responsibility file separation (`InputParser`, `CommandSpec`, `Program`)
+
+| File | Project | Responsibility |
+|---|---|---|
+| `Contact.cs` | `ContactFinder.Core` | Record with constructor validation and phone normalization |
+| `ContactRepository.cs` | `ContactFinder.Core` | Dual-index in-memory store |
+| `InputParser.cs` | `ContactFinder.AdvancedRepl` | Quote-aware tokenizer  CLI specific |
+| `CommandSpec.cs` | `ContactFinder.AdvancedRepl` | Command name - usage + handler mapping |
+| `Program.cs` | `ContactFinder.AdvancedRepl` | REPL loop and command handlers |
+
+**Commands:**
+
+| Command | Usage |
+|---|---|
+| `add` | `add "Alice Johnson" alice@example.com 555-123-4567` |
+| `find` | `find alice@example.com` |
+| `find-phone` | `find-phone (555) 123-4567` |
+| `list` | `list` |
+| `remove` | `remove alice@example.com` |
+| `help` | `help` or `help <command>` |
+| `quit` / `exit` | Exit the application |
 
 ---
 
