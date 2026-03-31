@@ -16,13 +16,13 @@ namespace ContactFinder.Core
         public void Add(Contact contact)
         {
             var emailKey = NormalizeEmail(contact.Email);
-            var phoneKey = Contact.NormalizPhone(contact.Phone);
+            var phoneKey = Contact.NormalizePhone(contact.Phone);
 
             // Remove existing contacts - Phone Number with the same email1
             // If a contact with the same email already exists, remove the old phone mapping
             if (_contactsByEmail.TryGetValue(emailKey, out var existing))
             {
-                _emailByPhone.Remove(Contact.NormalizPhone(existing.Phone));
+                _emailByPhone.Remove(Contact.NormalizePhone(existing.Phone));
             }
             _contactsByEmail[emailKey] = contact;
             _emailByPhone[phoneKey] = emailKey;
@@ -38,7 +38,7 @@ namespace ContactFinder.Core
         // Get contact by phone
         public Contact? GetByPhone(string phone)
         {
-            var phoneKey = Contact.NormalizPhone(phone);
+            var phoneKey = Contact.NormalizePhone(phone);
             if (_emailByPhone.TryGetValue(phoneKey, out var emailKey))
             {
                 return _contactsByEmail.GetValueOrDefault(emailKey);
@@ -52,7 +52,7 @@ namespace ContactFinder.Core
             if (_contactsByEmail.TryGetValue(emailKey, out var contact))
             {
                 _contactsByEmail.Remove(emailKey);
-                _emailByPhone.Remove(Contact.NormalizPhone(contact.Phone));
+                _emailByPhone.Remove(Contact.NormalizePhone(contact.Phone));
                 return true;
             }
             return false;

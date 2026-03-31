@@ -26,10 +26,10 @@ namespace ContactFinder.Core
             }
             Name = name.Trim();
             Email = email.Trim();
-            Phone = NormalizPhone(phone);
+            Phone = NormalizePhone(phone);
         }
 
-        public static string NormalizPhone(string phone)
+        public static string NormalizePhone(string phone)
         {
             var sb = new StringBuilder(phone.Length);
             foreach (var c in phone)
